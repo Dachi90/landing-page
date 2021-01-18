@@ -1,0 +1,489 @@
+:root {
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%);
+  --dark-gray: hsl(0, 0%, 55%);
+  --very-dark-gray: hsl(0, 0%, 41%);
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 15px;
+  margin: 0;
+}
+
+/********** Utilities **********/
+
+.container {
+  width: 85%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.full-screen {
+  height: 100vh;
+}
+
+.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.img-fluid {
+  width: 100%;
+  height: auto;
+}
+
+.logo {
+  width: 50%;
+}
+
+.none {
+  display: none;
+}
+
+.subtitle {
+  text-transform: uppercase;
+  font-family: "Josefin Sans";
+  font-weight: 300;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+/********** Site styles **********/
+
+/*** Header ***/
+.header {
+  background-image: url("/images/mobile/image-hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  padding-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hamburger {
+  cursor: pointer;
+}
+
+.navbar-menu {
+  height: 100vh;
+  width: 100vw;
+  z-index: 999;
+  position: fixed;
+  top: -100vh;
+  left: 100vw;
+  background-color: var(--black);
+  transform: scale(0);
+  border-bottom-left-radius: 200px;
+  transition: all 1.5s ease-in-out;
+}
+
+.navbar-menu-active {
+  transform: scale(1);
+  border-radius: 0;
+  top: 0;
+  left: 0;
+}
+
+.navbar-menu .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.menu-title {
+  position: absolute;
+  top: 2rem;
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close {
+  cursor: pointer;
+}
+
+.menu-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 40%;
+}
+
+.menu-links a {
+  text-decoration: none;
+  color: white;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+.slogan-container {
+  border: 1px solid var(--white);
+}
+
+.slogan {
+  text-transform: uppercase;
+  color: var(--white);
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 2rem;
+  font-weight: 300;
+  margin: 0;
+  padding: 1.5rem;
+}
+
+/*** About ***/
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  background-image: url("/images/mobile/image-interactive.jpg");
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 448px;
+}
+
+.about-text p {
+  font-family: "Alata", sans-serif;
+  font-weight: 400;
+  color: var(--dark-gray);
+  text-align: center;
+}
+
+/*** Products ***/
+.products {
+  min-height: 100vh;
+}
+
+.img-container {
+  height: 6rem;
+  color: var(--white);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 1.5rem;
+}
+
+.img-container div {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.img-container div:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+  color: var(--black);
+}
+
+.img-container p {
+  margin-left: 1rem;
+  text-transform: uppercase;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.3rem;
+}
+
+.img-container {
+  background-image: var(--image-card-bg);
+}
+
+.button {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Alata", sans-serif;
+  font-weight: 400;
+  color: var(--black);
+  border: 1px solid var(--black);
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.button p {
+  margin: 0.5rem auto;
+}
+
+/*** Footer ***/
+
+.footer {
+  background-color: var(--black);
+  text-align: center;
+  padding: 2rem 0;
+  margin-top: 3rem;
+  color: var(--white);
+  font-family: "Alata", sans-serif;
+  font-weight: 400;
+}
+
+.footer-menu {
+  margin: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-menu a {
+  width: fit-content;
+  padding: 0.25rem 0;
+  text-decoration: none;
+  color: var(--white);
+  position: relative;
+}
+
+.footer-menu a:hover::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50%;
+  transform: translateX(50%);
+  border-bottom: 2px solid white;
+}
+
+.social-media {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+
+.social-media a {
+  position: relative;
+}
+
+.social-media a:hover::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  border-bottom: 2px solid white;
+}
+
+.copy {
+  margin-top: 1rem;
+  color: var(--dark-gray);
+  font-family: "Alata", sans-serif;
+  font-weight: 400;
+}
+
+@media screen and (min-width: 920px) {
+  /** Header **/
+  .header {
+    background-image: url("/images/desktop/image-hero.jpg");
+    background-position: center center;
+    height: 650px;
+  }
+
+  .logo {
+    width: 30%;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .navbar-menu {
+    height: auto;
+    width: 50%;
+    position: static;
+    background-color: transparent;
+    display: flex;
+  }
+
+  .navbar-menu .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    margin: auto;
+  }
+
+  .menu-title {
+    display: none;
+  }
+
+  .menu-links {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .menu-links a {
+    font-size: 1rem;
+    position: relative;
+  }
+
+  .menu-links a:hover::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 50%;
+    transform: translateX(50%);
+    border-bottom: 2px solid white;
+  }
+
+  /** About **/
+
+  .about {
+    height: auto;
+    padding-top: 3rem;
+  }
+
+  .about .container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .image {
+    background-image: url("/images/desktop/image-interactive.jpg");
+    grid-column: 1/5;
+    grid-row: 1/-1;
+  }
+
+  .about-text {
+    grid-column: 4/7;
+    grid-row: 1/-1;
+    align-self: end;
+    background-color: var(--white);
+    padding-left: 3rem;
+    padding-top: 3rem;
+  }
+
+  /** About **/
+
+  .products {
+    height: auto;
+    margin-top: 5rem;
+  }
+
+  .products .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-auto-rows: 450px;
+
+    grid-template-areas:
+      "title  title  button button"
+      "photo1 photo2 photo3 photo4"
+      "photo5 photo6 photo7 photo8";
+
+    gap: 1rem;
+  }
+
+  .img-container {
+    margin: 0;
+    background-image: var(--image-card-bg-desktop);
+    height: 100%;
+  }
+
+  .subtitle {
+    grid-area: title;
+    justify-self: start;
+  }
+
+  .products .container .img-container:nth-child(2) {
+    grid-area: photo1;
+  }
+  .products .container .img-container:nth-child(3) {
+    grid-area: photo2;
+  }
+  .products .container .img-container:nth-child(4) {
+    grid-area: photo3;
+  }
+  .products .container .img-container:nth-child(5) {
+    grid-area: photo4;
+  }
+  .products .container .img-container:nth-child(6) {
+    grid-area: photo5;
+  }
+  .products .container .img-container:nth-child(7) {
+    grid-area: photo6;
+  }
+  .products .container .img-container:nth-child(8) {
+    grid-area: photo7;
+  }
+  .products .container .img-container:nth-child(9) {
+    grid-area: photo8;
+  }
+
+  .button {
+    grid-area: button;
+    margin: 0;
+    justify-self: end;
+    align-self: center;
+    width: 35%;
+  }
+
+  /** Footer **/
+
+  .footer {
+    padding: 1rem 0;
+  }
+
+  .footer .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    grid-template-areas:
+      "logo  media"
+      "menu  copy";
+  }
+
+  .footer .container .logo {
+    grid-area: logo;
+  }
+
+  .footer-menu {
+    grid-area: menu;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+  }
+
+  .social-media {
+    grid-area: media;
+  }
+
+  .copy {
+    grid-area: copy;
+    margin: 0;
+    align-self: end;
+  }
+}

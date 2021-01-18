@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
   
   <title>Frontend Mentor | Loopstudios landing page</title>
 
@@ -15,45 +18,140 @@
   </style>
 </head>
 <body>
-  About
-  Careers
-  Events
-  Products
-  Support
 
-  Immersive experiences that deliver
+  <header class="header full-screen">
+    <nav class="navbar container">
+      <img class="logo" src="/images/logo.svg" alt="logo">
 
-  The leader in interactive VR
+      <svg class="hamburger" width="24" height="16" xmlns="http://www.w3.org/2000/svg"><g fill="#FFF" fill-rule="evenodd"><path d="M0 0h24v2H0zM0 7h24v2H0zM0 14h24v2H0z"/></g></svg>
 
-  Founded in 2011, Loopstudios has been producing world-class virtual reality 
-  projects for some of the best companies around the globe. Our award-winning 
-  creations have transformed businesses through digital experiences that bind 
-  to their brand.
+      <div class="navbar-menu">
+        <div class="container full-screen">
+          <div class="menu-title ">
+            <img class="logo" src="/images/logo.svg" alt="logo">
+            <img class="close" src="/images/icon-close.svg" alt="close">
+          </div>
+          <div class="menu-links ">
+            <a href="#about">ABOUT</a>
+            <a href="#">CAREERS</a>
+            <a href="#">EVENTS</a>
+            <a href="#products">PRODUCTS</a>
+            <a href="#">SUPPORT</a>
+          </div>
+        </div>
+      </div>
+      
+    </nav>
 
-  Our creations
+    <div class="slogan-container container">
+      <h1 class="slogan">Immersive<br> experiences <br> that <br> deliver</h1>
+    </div>
+  </header>
 
-  See all
 
-  Deep earth
-  Night arcade
-  Soccer team VR
-  The grid
-  From up above VR
-  Pocket borealis
-  The curiosity
-  Make it fisheye
 
-  About
-  Careers
-  Events
-  Products
-  Support
+  <section class="about full-screen" id="about">
+    <div class="container">
+      <!-- <img class="img-fluid" src="/images/mobile/image-interactive.jpg" alt="VR interactive"> -->
+      <div class="image"></div>
+  
+      <div class="about-text">
+        <h3 class="subtitle">The leader in interactive VR</h3>
+        <p>
+          Founded in 2011, Loopstudios has been producing world-class virtual reality 
+          projects for some of the best companies around the globe. Our award-winning 
+          creations have transformed businesses through digital experiences that bind 
+          to their brand.
+        </p>
+      </div>
+    </div>
+  </section>
 
-  © 2021 Loopstudios. All rights reserved.
+  <section class="products" id="products">
+    <div class="container">
+      <h3 class="subtitle">Our creations</h3>
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+      <article class="img-container" style="--image-card-bg:url('/images/mobile/image-deep-earth.jpg'); --image-card-bg-desktop:url('/images/desktop/image-deep-earth.jpg');">
+        <div>
+          <p>Deep <br> Earth</p>
+        </div>
+      </article>
+
+      <article class="img-container" style="--image-card-bg:url('/images/mobile/image-night-arcade.jpg'); --image-card-bg-desktop:url('/images/desktop/image-night-arcade.jpg');">
+        <div>
+          <p>Nigth <br> Arcade</p>
+        </div>
+      </article>
+
+      <article class="img-container" style="--image-card-bg:url('/images/mobile/image-soccer-team.jpg'); --image-card-bg-desktop:url('/images/desktop/image-soccer-team.jpg');">
+        <div>
+          <p>Team <br> Soocer VR</p>
+        </div>
+      </article>
+
+      <article class="img-container" style="--image-card-bg:url('/images/mobile/image-grid.jpg'); --image-card-bg-desktop:url('/images/desktop/image-grid.jpg');">
+        <div>
+          <p>The <br> Grid</p>
+        </div>
+      </article>
+
+      <article class="img-container" style="--image-card-bg:url('/images/mobile/image-from-above.jpg'); --image-card-bg-desktop:url('/images/desktop/image-from-above.jpg');">
+        <div>
+          <p>From UP <br> Above VR</p>
+        </div>
+      </article>
+
+      <article class="img-container" style="--image-card-bg:url('/images/mobile/image-pocket-borealis.jpg'); --image-card-bg-desktop:url('/images/desktop/image-pocket-borealis.jpg');">
+        <div>
+          <p>Pocket <br> Borealis</p>
+        </div>
+      </article>
+
+      <article class="img-container" style="--image-card-bg:url('/images/mobile/image-curiosity.jpg'); --image-card-bg-desktop:url('/images/desktop/image-curiosity.jpg');">
+        <div>
+          <p>The <br> curiosity</p>
+        </div>
+      </article>
+
+      <article class="img-container" style="--image-card-bg:url('/images/mobile/image-fisheye.jpg'); --image-card-bg-desktop:url('/images/desktop/image-fisheye.jpg');">
+        <div>
+          <p>Make it <br> Fisheye</p>
+        </div>
+      </article>
+
+      <div class="button">
+        <p>See all</p>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <img class="logo" src="/images/logo.svg" alt="logo">
+  
+      <div class="footer-menu">
+        <a href="#">About</a>
+        <a href="#">Careers</a>
+        <a href="#">Events</a>
+        <a href="#">Products</a>
+        <a href="#">Support</a>
+      </div>
+  
+      <div class="social-media">
+        <a href="#"><img src="/images/icon-facebook.svg" alt="Facebook"></a>
+        <a href="#"><img src="/images/icon-twitter.svg" alt="Facebook"></a>
+        <a href="#"><img src="/images/icon-pinterest.svg" alt="Facebook"></a>
+        <a href="#"><img src="/images/icon-instagram.svg" alt="Facebook"></a>
+      </div>
+  
+      <div class="copy">
+        <small>© 2021 Loopstudios. All rights reserved.</small>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/script.js"></script>
+
 </body>
 </html>
